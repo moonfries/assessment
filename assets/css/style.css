@@ -1,0 +1,2143 @@
+@charset "UTF-8";
+
+* {
+  	font-family: "Urbanist", sans-serif;
+  	font-optical-sizing: auto;
+}
+
+/*--------------------------------------------Topbar--------------------------------------------*/
+body {
+ 	background-color: #000000;
+}
+
+.top-bar {
+	top: 0;
+	display: flex;
+	color: #fff;
+	padding: 0 40px;
+	border-bottom: solid 2px #272727;
+	background-color: #000000;
+	z-index: 1;
+	position: fixed;
+	width: calc(100% - 80px);
+}
+
+.top-bar .logo-wrapper {
+	padding: 20px 16px 20px 0;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-bar .logo-wrapper .logo-box {
+	display: flex;
+	align-items: center;
+}
+
+.top-bar .logo-wrapper .logo-box p {
+	font-size: 23px;
+	font-weight: 900;
+	margin-left: 8px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.top-bar .top-bar-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+}
+
+.top-bar .top-bar-content .title-component {
+	display: flex;
+	align-items: center;
+}
+
+.top-bar .top-bar-content .title-component img {
+  	margin-right: 18px;
+}
+
+.top-bar .top-bar-content .title-component p {
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 140%;
+}
+
+.top-bar .top-bar-content .actions-component {
+	display: flex;
+	align-items: center;
+}
+
+.top-bar .top-bar-content .actions-component .search-bar-component {
+	display: flex;
+	align-items: center;
+	background: #272727;
+	border-radius: 28px;
+	padding: 8px 16px;
+	width: 280px;
+}
+
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=text] {
+	background: transparent;
+	border: none;
+	margin-left: 18px;
+	width: 100%;
+	color: #fff;
+}
+
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=text]:focus {
+  	outline: none !important;
+}
+
+.top-bar .top-bar-content .actions-component .filter-icon-component {
+  	margin: 0 16px;
+}
+
+.top-bar .top-bar-content .actions-component .notification-icon-component {
+	cursor: pointer;
+	background: #6E56E0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.top-bar .top-bar-content .actions-component .notification-icon-component img {
+	width: 24px;
+	height: 24px;
+	background: #6E56E0;
+}
+
+.top-bar .top-bar-content .actions-component .notification-icon-component .unread-notification-indication-light {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #FFD928;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+}
+
+.top-bar .top-bar-content .actions-component .account-action-component {
+ 	margin: 0 0 0 16px;
+}
+
+.page-content {
+  	display: flex;
+	transition: filter 0.4s ease;
+}
+
+.page-content .nav-bar {
+	width: 240px;
+	border-right: solid 2px #272727;
+	min-height: calc(100vh - 89.52px);
+	position: fixed;
+	top: 72px;
+}
+
+.page-content .nav-bar .nav-list {
+	list-style: none;
+	color: #fff;
+	padding: 0;
+	margin-top: 0;
+	padding-right: 40px;
+}
+
+.page-content .nav-bar .nav-list .normal-list-item {
+	padding: 12px 0 12px 40px;
+	display: flex;
+	align-items: center;
+	width: 180px;
+	margin-top: 8px;
+}
+
+.page-content .nav-bar .nav-list .normal-list-item label {
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	margin-left: 15px;
+}
+
+.page-content .nav-bar .nav-list .normal-list-item .notify-value {
+	margin-left: 10px;
+	background: #FFD928;
+	color: #000000;
+	font-size: 12.616px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%;
+	width: 28px;
+	height: 24px;
+	border-radius: 29px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content .nav-bar .nav-list .leave-item {
+	background-color: #6E56E0 !important;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+.page-content .nav-bar .nav-list .leave-item img,
+.page-content .nav-bar .nav-list .leave-item label {
+  	background-color: #6E56E0 !important;
+}
+
+.page-content .main-content {
+	padding: 16px 40px;
+	color: #fff;
+	position: relative;
+	width: calc(100vw - 272px);
+	margin-left: 272px;
+}
+
+.page-content .main-content .tabs-row {
+	display: flex;
+	align-items: center;
+	top: 74px;
+	position: fixed;
+	background: #000000;
+	width: calc(100% - 342px);
+	z-index: 1;
+}
+
+.page-content .main-content .tabs-row .tabs-list {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.page-content .main-content .tabs-row .tabs-list .tabs-list-item {
+	margin-right: 12px;
+	padding: 8px 8px 18px 8px;
+	position: relative;
+	cursor: pointer;
+}
+
+.page-content .main-content .tabs-row .tabs-list .tabs-list-item label,
+.page-content .main-content .tabs-row .tabs-list .tabs-list-item img {
+  	cursor: pointer;
+}
+
+.page-content .main-content .tabs-row .tabs-list .unread::after {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #FFD928;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.page-content .main-content .tabs-row .tabs-list .active {
+  	border-bottom: solid 2px #6E56E0 !important;
+}
+
+.page-content .main-content .dashboard-component {
+	display: flex;
+	flex-direction: column;
+	margin-top: 140px;
+}
+
+.page-content .main-content .dashboard-component .component-title {
+	color: #FFF;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+}
+
+.page-content .main-content .dashboard-component .component-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 18px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component {
+	background: #1E1E1E;
+	flex: 1;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: solid 2px #272727;
+	padding: 16px 16px 10px 24px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .component-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	margin: 0px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select {
+	background-color: transparent;
+	border: none;
+	color: #898989;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select:focus {
+  	outline: none !important;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row {
+	padding: 10px 16px 10px 24px;
+	overflow: hidden;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list {
+	display: flex;
+	list-style: none;
+	border: solid 1px #272727;
+	border-radius: 8px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
+	flex: 1;
+	border-right: solid 1px #272727;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list .active-day {
+  	background: #C33535;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 16px 10px 24px;
+	min-height: 175px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .indicator-name {
+	margin: 0px;
+	color: #FFF;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .inner-circle {
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .percentage {
+	position: relative;
+	color: #FFF !important;
+	text-align: center;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer {
+	padding: 16px 16px 16px 24px;
+	border-top: solid 2px #272727;
+}
+
+.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer p {
+	margin: 0;
+	color: #898989;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component {
+	background: #1E1E1E;
+	flex: 1;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: solid 2px #272727;
+	padding: 16px 16px 10px 24px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .component-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	margin: 0px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select {
+	background-color: transparent;
+	border: none;
+	color: #898989;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select:focus {
+  	outline: none;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component {
+	min-height: 90px;
+	padding: 10px 16px 10px 24px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list {
+	list-style: none;
+	padding: 0px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
+	margin: 0px;
+	overflow: hidden;
+	color: #898989;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer {
+	padding: 16px 16px 16px 24px;
+	border-top: solid 2px #272727;
+}
+
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer p {
+	margin: 0;
+	color: #898989;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.page-content .main-content .dashboard-component .component-row .avatar-component {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.page-content .main-content .dashboard-component .component-row .avatar-component::after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFD928;
+	position: absolute;
+	top: 0px;
+	right: -20px;
+}
+
+.page-content .main-content .leave-requests-component {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row .component-title {
+	color: #FFF;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view,
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+	cursor: pointer;
+	border: none;
+	color: #898989;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	background: #272727;
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view {
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+
+
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+
+.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .active {
+	color: #FFF !important;
+	font-weight: 700 !important;
+	background: #6E56E0 !important;
+}
+
+.page-content .main-content .leave-requests-component .component-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 18px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component {
+	background: #1E1E1E;
+	flex: 1;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: solid 2px #272727;
+	padding: 16px 16px 10px 24px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .component-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	margin: 0px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component select {
+	background-color: transparent;
+	border: none;
+	color: #898989;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component select:focus {
+  	outline: none;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row {
+	padding: 10px 16px 10px 24px;
+	overflow: hidden;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list {
+	display: flex;
+	list-style: none;
+	border: solid 1px #272727;
+	border-radius: 8px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list .day-list-item {
+	flex: 1;
+	border-right: solid 1px #272727;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list .active-day {
+  	background: #C33535;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 16px 10px 24px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div {
+  	min-width: 100%;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div {
+	border-radius: 8px;
+	background-color: #272727;
+	padding: 12px 20px;
+	display: flex;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div {
+	display: flex;
+	align-items: center;
+	padding: 12px 20px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div div {
+  	padding: 10px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div div .sort-icon,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div div .sort-icon {
+	margin-left: 10px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	width: 70px;
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox {
+	width: 20px;
+	height: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 2px solid #fff;
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .disabled,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .disabled {
+	border: 2px solid #888 !important;
+	cursor: no-drop;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked {
+	background-color: #6E56E0;
+	border: 2px solid #6E56E0;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked::after,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked::after {
+	content: "✔";
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 2px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .pending-request,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .approved-request,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .pending-request,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .approved-request,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request {
+  	position: relative;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .pending-request::after,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .pending-request::after {
+	position: absolute;
+	content: "";
+	top: 19px;
+	left: 40px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFD928;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .approved-request::after,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .approved-request::after {
+	position: absolute;
+	content: "";
+	top: 19px;
+	left: 40px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: green;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request::after,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request::after {
+	position: absolute;
+	content: "";
+	top: 19px;
+	left: 40px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: red;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div {
+	flex: 2;
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .user-name,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .user-name {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	margin-left: 12px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div {
+  	flex: 2;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span {
+  	display: flex;
+  	flex-direction: column;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span label,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span label {
+	color: #FFF;
+	font-size: 15.528px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.776px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div {
+  	flex: 1;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .leave-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .leave-col-div {
+  	flex: 1;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	flex: 3;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
+	cursor: pointer;
+	width: 98px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject {
+	border: solid 2px #898989;
+	background-color: #1E1E1E;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
+	border: solid 2px #6E56E0;
+	background-color: #6E56E0;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+	margin-left: 8px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	min-width: 204px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
+	width: 110px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
+	border: solid 2px #6E56E0;
+	background-color: #6E56E0;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+	margin-left: 8px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	min-width: 204px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject {
+	width: 110px;
+	height: 40px;
+	border-radius: 20px;
+	border: solid 2px #898989;
+	background-color: #1E1E1E;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div {
+  	border-bottom: solid 2px #272727;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer {
+	padding: 16px 16px 16px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .pagination-btn {
+	background-color: rgba(255, 255, 255, 0.08);
+	border: none;
+	padding: 10px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .prev-btn,
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .next-btn {
+	color: #fff;
+	font-size: 13.587px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.679px;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .disabled {
+  	color: #898989 !important;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component {
+	background: #1E1E1E;
+	flex: 1;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: solid 2px #272727;
+	padding: 16px 16px 10px 24px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .component-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	margin: 0px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select {
+	background-color: transparent;
+	border: none;
+	color: #898989;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select:focus {
+  	outline: none;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component {
+	min-height: 298px;
+	padding: 10px 16px 10px 24px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list {
+	list-style: none;
+	padding: 0px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
+	margin: 0px;
+	overflow: hidden;
+	color: #898989;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .component-footer {
+	padding: 16px 16px 16px 24px;
+	border-top: solid 2px #272727;
+}
+
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .component-footer p {
+	margin: 0;
+	color: #898989;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.page-content .main-content .leave-requests-component .component-row .avatar-component {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.page-content .main-content .leave-requests-component .component-row .avatar-component::after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFD928;
+	position: absolute;
+	top: 0px;
+	right: -20px;
+}
+
+.page-content .main-content .leave-details-nested-view {
+	margin-top: 140px;
+	width: calc(100% - 500px);
+}
+
+.page-content .main-content .leave-details-nested-view .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .header .title {
+	color: #FFF;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+}
+
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component .list-view,
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component .month-view {
+	cursor: pointer;
+	border: none;
+	color: #898989;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	background: #272727;
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component .list-view {
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component .month-view {
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+
+.page-content .main-content .leave-details-nested-view .header .request-view-type-buttons-component .active {
+	color: #FFF !important;
+	font-weight: 700 !important;
+	background: #6E56E0 !important;
+}
+
+.page-content .main-content .leave-details-nested-view .body {
+	margin-top: 38px;
+	background-color: #1E1E1E;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .tabs {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .tabs .tab {
+	margin-right: 32px;
+	padding: 0px 0px 10px 0px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .tabs .active {
+	border-bottom: solid 2px #6E56E0;
+	padding: 0px 10px 10px 10px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .date-picker-row {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .date-picker-row .arrow,
+.page-content .main-content .leave-details-nested-view .body .header .date-picker-row .calendar {
+  	margin-right: 15px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .date-picker-row .month {
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+.page-content .main-content .leave-details-nested-view .body .header .date-picker-row .year {
+	color: #898989;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	margin: 0 15px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list {
+ 	margin-top: 18px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card {
+	border: solid 2px #272727;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: solid 2px #272727;
+	padding-bottom: 10px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar img {
+  	margin-right: 8px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar p {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	text-transform: capitalize;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .reject,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .approve {
+	cursor: pointer;
+	width: 98px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .reject {
+	border: solid 2px #898989;
+	background-color: #1E1E1E;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .approve {
+	border: solid 2px #6E56E0;
+	background-color: #6E56E0;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+	margin-left: 8px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row {
+	display: flex;
+	align-items: center;
+	padding: 15px 0px 0px 0px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box {
+  	flex: 1;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days {
+  	margin-bottom: 15px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .value {
+  	flex: 1;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .key,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .key {
+	color: #898989;
+	font-size: 15.528px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.776px;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .value,
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .value {
+	color: #FFF;
+	font-size: 15.528px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.776px;
+}
+
+.page-content .main-content .leave-details-nested-view .body .request-card-list .pending::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 4px;
+	background: #FFA424;
+	top: 0px;
+	left: 0px;
+}
+
+.page-content .main-content .notifications-component {
+	width: 464px;
+	min-height: calc(100vh - 90px);
+	padding: 0 24px 24px 24px;
+	border-left: solid 2px #272727;
+	position: fixed;
+	z-index: 1;
+	background-color: #000000;
+	right: 0px;
+	top: 70px;
+}
+
+.page-content .main-content .notifications-component .notify-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-content .main-content .notifications-component .notify-header .mark-all-box {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .notifications-component .notify-header .mark-all-box label {
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	margin-right: 4px;
+}
+
+.page-content .main-content .notifications-component .notifications-list {
+	list-style: none;
+	padding: 0px;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item {
+	background: #1E1E1E;
+	display: flex;
+	gap: 16px;
+	margin-bottom: 8px;
+	border-radius: 12px;
+	padding: 16px;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notification-user-avatar {
+	min-width: 48px;
+	position: relative;
+	background: transparent;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notification-user-avatar img {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	background: transparent;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .active::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFD928;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component {
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	gap: 12px;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-message {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	margin: 0px;
+	background: transparent;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-message .user-name {
+	font-weight: 700;
+	background: transparent;
+	margin-right: 8px;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-message {
+	color: #898989 !important;
+	font-weight: 400 !important;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-message .user-name {
+  	font-weight: 400 !important;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-time {
+	color: #ccc;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	background: transparent;
+}
+
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-time {
+  	color: #697386 !important;
+}
+
+.page-content .main-content .leave-deatils-component {
+	width: 464px;
+	height: calc(100vh - 90px);
+	overflow: auto;
+	padding: 0 24px 24px 24px;
+	border-left: solid 2px #272727;
+	position: fixed;
+	z-index: 1;
+	background-color: #151515;
+	right: 0px;
+	top: 74px;
+}
+
+.page-content .main-content .leave-deatils-component .leave-details-header,
+.page-content .main-content .leave-deatils-component .approval-level-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card {
+	border: solid 2px #272727;
+	border-radius: 12px;
+	padding: 16px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component {
+	border-bottom: solid 2px #272727;
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 15px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component {
+  	margin-left: 16px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .info-key {
+	min-width: 95px;
+	color: #898989;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .info-value {
+	flex: 1;
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	margin-left: 10px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .attachment-value {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .user-details-component .user-info-component .user-info-row .attachment-value img {
+  	margin-right: 5px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component {
+  	margin-top: 15px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-start-end-date {
+	color: #898989;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .total-hours-text {
+	margin: 0px;
+	color: #FFF;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .table-visibility-controller {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .table-visibility-controller .toggle-table-label {
+	color: #6E56E0;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-info-component .leave-hours-and-table-controller-row .table-visibility-controller img {
+  	margin-left: 15px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component {
+	transition: all 0.2s ease-in-out;
+	overflow: hidden;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-head {
+	background-color: #272727;
+	overflow: hidden;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-head .first-col {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-head .last-col {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-head td {
+  	padding: 10px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-head td label {
+	color: #898989;
+	font-size: 13.587px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.679px;
+	text-transform: uppercase;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-body-row td {
+  	padding: 8px 10px 2px 10px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-body-row td label {
+	color: #FFF;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.65px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-off-days-body-row td {
+  	padding: 8px 10px 5px;
+}
+
+.page-content .main-content .leave-deatils-component .user-details-card .leave-days-table-component .leave-days-table .table-off-days-body-row td label {
+	color: #898989;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.65px;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card {
+	border: solid 2px #272727;
+	border-radius: 12px;
+	padding: 16px;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	height: 60px;
+	position: relative;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-avatar,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-avatar,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-avatar {
+  	margin: 0 15px;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-indicator,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-indicator,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-indicator {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-pending,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-pending,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-pending {
+  	background-color: #FFA424;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approval-approved,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approval-approved,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approval-approved {
+  	background-color: green;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-row,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-row,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-row {
+	display: flex;
+	align-items: center;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-key,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-key,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-key {
+	color: #898989;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	width: 120px;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .approver-info-value,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .approver-info-value,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .approver-info-value {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .approver-info-component .pending,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .approver-info-component .pending,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .approver-info-component .pending {
+  	color: #898989 !important;
+}
+
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-1-row .timeline-connect-line,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-2-row .timeline-connect-line,
+.page-content .main-content .leave-deatils-component .approval-level-card .approval-level-3-row .timeline-connect-line {
+	height: 77px;
+	position: absolute;
+	left: 5.5px;
+	border-left: 1px #898989 dashed;
+	top: 36px;
+	z-index: -1;
+}
+
+.page-content .main-content .leave-deatils-component .comments-box-card {
+	border: solid 2px #272727;
+	border-radius: 12px;
+	padding: 16px;
+	margin-bottom: 50px;
+}
+
+.page-content .main-content .leave-deatils-component .comments-box-card .comments-box {
+	color: #fff;
+	background-color: transparent;
+	min-width: 100%;
+	border: none;
+}
+
+.page-content .main-content .leave-deatils-component .comments-box-card .comments-box:focus {
+  	outline: none;
+}
+
+.page-content .main-content .leave-deatils-component .leave-request-actions-row {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #272727;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.page-content .main-content .leave-deatils-component .leave-request-actions-row .action-button {
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content .main-content .leave-deatils-component .leave-request-actions-row .approve {
+	border: solid 2px #6E56E0;
+	background: #6E56E0;
+	color: #fff;
+	margin: 0 20px 0 15px;
+	width: 130px;
+	height: 40px;
+}
+
+.page-content .main-content .leave-deatils-component .leave-request-actions-row .reject {
+	border: solid 2px #151515;
+	background: #272727;
+	color: #fff;
+	width: 120px;
+	height: 40px;
+}
+
+.approve-toast-notification {
+	position: fixed;
+	z-index: 100;
+	top: 30px;
+	left: 20px;
+	background: #1E1E1E;
+	color: #fff;
+	min-width: 340px;
+	min-height: 122px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.approve-toast-notification .notification-header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.approve-toast-notification .notification-header .progress-bar {
+	margin: 15px 10px;
+	height: 8px;
+	background-color: #888;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.approve-toast-notification .notification-header .progress-bar .progress {
+	width: 100%;
+	height: 100%;
+	background: #FFD928;
+}
+
+.approve-toast-notification .notification-header .toast-title {
+	margin: 5px 10px;
+	border-bottom: solid 2px #272727;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.approve-toast-notification .notification-header .toast-title p {
+  	margin: 0px;
+}
+
+.approve-toast-notification .notification-header .toast-title .close-notification-span {
+	display: flex;
+	align-items: center;
+}
+
+.approve-toast-notification .notification-header .toast-title .close-notification-span img {
+	max-width: 50%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.approve-toast-notification .notification-body {
+  	padding: 10px;
+}
+
+.approve-toast-notification .notification-body .notification-message {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	margin: 0px;
+	margin: 0px 10px;
+}
+
+.reject-toast-notification {
+	position: fixed;
+	z-index: 100;
+	top: 30px;
+	left: 20px;
+	background: #1E1E1E;
+	color: #fff;
+	min-width: 340px;
+	min-height: 122px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.reject-toast-notification .reject-notification-header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.reject-toast-notification .reject-notification-header .reject-progress-bar {
+	margin: 15px 10px;
+	height: 8px;
+	background-color: #888;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.reject-toast-notification .reject-notification-header .reject-progress-bar .reject-progress {
+	width: 100%;
+	height: 100%;
+	background: red;
+}
+
+.reject-toast-notification .reject-notification-header .reject-toast-title {
+	margin: 5px 10px;
+	border-bottom: solid 2px #272727;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.reject-toast-notification .reject-notification-header .reject-toast-title p {
+  	margin: 0px;
+}
+
+.reject-toast-notification .reject-notification-header .reject-toast-title .close-reject-notification-span {
+	display: flex;
+	align-items: center;
+}
+
+.reject-toast-notification .reject-notification-header .reject-toast-title .close-reject-notification-span img {
+	max-width: 50%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.reject-toast-notification .notification-reject-body {
+  padding: 10px;
+}
+
+.reject-toast-notification .notification-reject-body .notification-reject-message {
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	margin: 0px;
+	margin: 0px 10px;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-content {
+	background: #1E1E1E;
+	padding: 20px;
+	height: 266px;
+	border-radius: 12px;
+	width: 600px;
+	transform: translateY(-30px);
+	transition: transform 0.4s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.modal-content .modal-header {
+	border-bottom: solid 2px #272727;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal-content .modal-header .modal-title {
+	color: #FFF;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 125%;
+}
+
+.modal-content .modal-message {
+	color: #FFF;
+	text-align: center;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 36px;
+}
+
+.modal-content .modal-footer {
+	border-top: solid 2px #272727;
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal-content .modal-footer .no-btn,
+.modal-content .modal-footer .yes-btn {
+	width: 88px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--White, #FFF);
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+	border-radius: 20px;
+}
+
+.modal-content .modal-footer .no-btn {
+	border: solid 2px #898989;
+	background: #1E1E1E;
+}
+
+.modal-content .modal-footer .yes-btn {
+	background: #6E56E0;
+	border: solid 2px #6E56E0;
+}
+
+.modal-overlay.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-overlay.show .modal-content {
+  	transform: translateY(0);
+}
+
+.close-modal {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#openModalBtn {
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: solid 2px #6E56E0;
+	background: #6E56E0;
+	color: #fff;
+	margin: 0 20px 0 15px;
+	width: 130px;
+	height: 40px;
+}
+
+.main-conditional-footer {
+	position: fixed;
+	background-color: #272727;
+	width: calc(100% - 30px);
+	padding: 16px;
+	color: #fff;
+	bottom: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-conditional-footer .actions-div {
+	display: flex;
+	align-items: center;
+}
+
+.main-conditional-footer .actions-div .reject,
+.main-conditional-footer .actions-div .approve {
+	cursor: pointer;
+	width: 98px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.main-conditional-footer .actions-div .reject {
+	border: solid 2px #898989;
+	background-color: #1E1E1E;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+}
+
+.main-conditional-footer .actions-div .approve {
+	border: solid 2px #6E56E0;
+	background-color: #6E56E0;
+	color: #FFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	text-transform: uppercase;
+	margin-left: 8px;
+}
